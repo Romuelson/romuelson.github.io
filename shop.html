@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Nerds «Каталог»</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+          $( function() {
+            $( "#slider-range" ).slider({
+              step: 500,
+              range: true,
+              min: 0,
+              max: 23000,
+              values: [ 0, 15000 ],
+              slide: function( event, ui ) {
+                $( "#min-value" ).val( ui.values[ 0 ] );
+                $( "#max-value" ).val( ui.values[ 1 ] );
+              }
+            });
+            $( "#min-value" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+            $( "#max-value" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+              
+              // Изменение местоположения ползунка при вводиде данных в первый элемент input
+              $("input#min-value").change(function(){
+                var value1=$("input#min-value").val();
+                var value2=$("input#max-value").val();
+                  if(parseInt(value1) > parseInt(value2)){
+                    value1 = value2;
+                    $("input#min-value").val(value1);
+                }
+                $("#slider-range").slider("values",0,value1);	
+              });
+
+              // Изменение местоположения ползунка при вводиде данных в второй элемент input 	
+              $("input#max-value").change(function(){
+                var value1=$("input#min-value").val();
+                var value2=$("input#max-value").val();
+
+                if(parseInt(value1) > parseInt(value2)){
+                    value2 = value1;
+                    $("input#max-value").val(value2);
+                }
+                $("#slider-range").slider("values",1,value2);
+              });
+
+              // фильтрация ввода в поля
+                jQuery('#min-value, #max-value').keypress(function(event){
+                    var key, keyChar;
+                    if(!event) var event = window.event;
+
+                    if (event.keyCode) key = event.keyCode;
+                    else if(event.which) key = event.which;
+
+                    if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+                    keyChar=String.fromCharCode(key);
+
+                    if(!/\d/.test(keyChar))	return false;
+
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <nav class="main-navigation">
+                    <a class="main-header-logo" href="#!"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн студии «Nerds»"></a>
+                    <div class="main-navigation-wrapper">
+                        <ul class="site-navigation">
+                            <li><a href="index.html">Студия</a></li>
+                            <li><a href="#!">Клиенты</a></li>
+                            <li><a class="site-navigation-current" href="shop.html">Магазин</a></li>
+                            <li><a href="#!">Контакты</a></li>
+                        </ul>
+                        <ul class="basket-goods">
+                            <li><a href="#!">Корзина</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <h1 class="main-heading">Магазин готовых шаблонов</h1>
+            </div>
+        </header>
+        <div class="container scribble">
+            <aside class="store-setup">
+                <div class="masonry">
+                    <b class="amount">Стоимость:</b><br>
+                    <div class="cost-slider">
+                        <div id="slider-range"></div>
+                    </div>
+                    <p class="slider-position">
+                        <label>
+                            От<input type="text" id="min-value">
+                        </label>
+                        <label>
+                            До<input type="text" id="max-value">
+                        </label>
+                    </p>
+                </div>
+            </aside>
+            <main class="store-catalog"></main>
+        </div>
+    </body>
+</html>

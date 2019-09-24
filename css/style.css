@@ -859,3 +859,272 @@ input:invalid:not(:placeholder-shown) {
     width: 100%;
     min-width: 1200px;
 }
+
+/*Магазин*/
+
+.scribble {
+    display: flex;
+    justify-content: space-between;
+}
+
+.store-setup {
+/*    outline: 1px solid blue;*/
+    width: 260px;
+}
+
+.main-heading {
+    margin: 0;
+    padding: 0;
+    
+    padding-top: 76px;
+    padding-bottom: 102px;
+    
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 55px;
+    text-align: center;
+}
+
+/*Ползунок стоимости*/
+
+.masonry {
+	width: 260px;
+}
+
+.masonry .amount {
+    display: inline-block;
+    
+    margin-bottom: 50px;
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.cost-slider {
+    width: 260px;
+    height: 80px;
+    
+    background-color: #eeeeee;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/*Ширина, высота и позиционирование для ползунков*/
+
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 21px;
+	height: 21px;
+	cursor: default;
+	-ms-touch-action: none;
+	touch-action: none;
+    cursor:pointer;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/*support: IE8 - See #6727*/
+
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+/*Высота горизонтальной полоски*/
+
+.ui-slider-horizontal {
+    height: 10px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.5em;
+	margin-left: -.6em;
+    
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+}
+
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+}
+
+/*Ширина вертикальной полоски*/
+
+.ui-slider-vertical {
+	height: 100px;
+}
+
+.ui-slider-vertical .ui-slider-range {
+    left: 0;
+    width: 100%;
+}
+
+.ui-slider-vertical .ui-slider-range-min {
+    bottom: 0;
+}
+
+.ui-slider-vertical .ui-slider-range-max {
+    top: 0;
+}
+
+/*Указание шрифта и размера текста*/
+
+.ui-widget {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 1em;
+}
+
+/*Стилизация полоски*/
+
+.ui-widget-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    
+    margin-left: -109px;
+    
+    width: 218px;
+    height: 2px;
+	background-color: #d7dcde;
+	color: #222222;
+}
+.ui-widget-content a {
+    color: #222222;
+}
+
+/* Стилизация промижудка между ползунками*/
+
+.ui-widget-header {
+	background: #00ca74;
+	color: #222222;
+	font-weight: bold;
+}
+
+.ui-widget-header a {
+    color: #222222;
+}
+
+/*Стилизация ползунков*/
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	font-weight: normal;
+	color: #555555;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 2px 0 #ccc, inset 0 1px 0 #fff;
+	   -moz-box-shadow: 0 2px 0 #ccc, inset 0 1px 0 #fff;
+		-ms-box-shadow: 0 2px 0 #ccc, inset 0 1px 0 #fff;
+		 -o-box-shadow: 0 2px 0 #ccc, inset 0 1px 0 #fff;
+	        box-shadow: 0 2px 0 #ccc, inset 0 1px 0 #fff;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+	color: #555555;
+	text-decoration: none;
+}
+
+.ui-state-default:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    
+    margin-top: -2.5px;
+    margin-left: -2.5px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    
+    background-color: #ababab;
+    border-radius: 50%;
+}
+
+/*Стилизация ползунка при наведении и фокусе*/
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    outline: none;
+}
+
+.masonry label {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.slider-position label {
+    width: 115px;
+}
+
+.slider-position label:last-child {
+    margin-left: 26px;
+}
+
+.masonry input {
+    display: inline-block;
+    
+	width: 80px;
+	height: 38px;
+    
+    margin: 0;
+    margin-left: 13px;
+    padding: 0;
+    
+    background-color: #eeeeee;
+	border: none;
+	border-radius: 3px;
+    box-sizing: border-box;
+    
+    font-size: 16px;
+    text-align: center;
+}
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+
+/*Каталог магазина*/
+
+.store-catalog {
+/*    outline: 1px solid red;*/
+    width: 760px;
+    min-height: 300px;
+}
