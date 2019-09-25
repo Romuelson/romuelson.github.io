@@ -1251,15 +1251,11 @@ input:invalid:not(:placeholder-shown) {
     margin: 0;
     padding: 0;
     
-    
     margin-top: 41px;
+    margin-bottom: 33px;
     
     border: 1px solid #e5e5e5;
     list-style: none;
-}
-
-.product-list a {
-    margin-bottom: 33px;
 }
 
 .product-list img {
