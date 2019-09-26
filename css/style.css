@@ -604,6 +604,7 @@ body {
     height: 100%;
     
     background-color: transparent;
+    user-select: none;
 }
 
 .modal-transparent:target {
@@ -849,6 +850,7 @@ input:invalid:not(:placeholder-shown) {
 }
 
 .sentence {
+    margin-bottom: 78px;
     padding-top: 74px;
     padding-left: 125px;
     user-select: none;
@@ -869,7 +871,7 @@ input:invalid:not(:placeholder-shown) {
     min-width: 1200px;
 }
 
-/*Магазин*/
+/*Сайд-бар магазина*/
 
 .scribble {
     display: flex;
@@ -877,7 +879,6 @@ input:invalid:not(:placeholder-shown) {
 }
 
 .store-setup {
-/*    outline: 1px solid blue;*/
     width: 260px;
 }
 
@@ -900,8 +901,22 @@ input:invalid:not(:placeholder-shown) {
 
 /*Ползунок стоимости*/
 
+
+.main-filter legend {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    border: none;
+}
+
 .masonry {
 	width: 260px;
+    
+    margin: 0;
+    padding: 0;
+    
+    border: none;
 }
 
 .amount {
@@ -1135,6 +1150,147 @@ input:invalid:not(:placeholder-shown) {
 	text-align: left;
 }
 
+.filter-nets {
+    margin: 0;
+    padding: 0;
+    
+    margin-top: 39px;
+    
+    border: none;
+}
+
+.filter-nets legend {
+    margin-bottom: 14px;
+}
+
+.filter-nets label {
+    width: 30px;
+}
+
+.filter-nets ul {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-nets li {
+    list-style: none;
+}
+
+.filter-nets label {
+    width: 30px;
+}
+
+.filter-nets .checkbox-indicator {
+    display: block;
+    position: relative;
+    
+    margin-bottom: 15px;
+    padding-top: 1px;
+    padding-left: 35px;
+    
+    color: #283136;
+    user-select: none;
+    cursor: pointer;
+}
+
+.filter-nets input[type="checkbox"] + .checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 25px;
+    height: 25px;
+    
+    background-image: url("../img/radio-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-nets input[type="checkbox"]:checked + .checkbox-indicator::before {
+    background-image: url("../img/radio-on.svg");
+}
+
+.filter-nets input[type="checkbox"] + .checkbox-indicator {
+    opacity: 0.6;
+}
+
+.filter-nets input[type="checkbox"]:hover + .checkbox-indicator {
+    opacity: 1;
+}
+
+.filter-nets input[type="checkbox"]:disabled + .checkbox-indicator {
+    opacity: 0.3;
+}
+
+.properties {
+    margin: 0;
+    padding: 0;
+    
+    border: none;
+}
+
+.properties legend {
+    padding-top: 30px;
+    margin-bottom: 15px;
+}
+
+.properties ul {
+    margin: 0;
+    padding: 0;
+}
+
+.properties li {
+    list-style: none;
+}
+
+.filter-nets label {
+    width: 30px;
+}
+
+.properties .checkbox-indicator {
+    display: block;
+    position: relative;
+    
+    margin-bottom: 15px;
+    padding-top: 1px;
+    padding-left: 35px;
+    
+    color: #283136;
+    user-select: none;
+    cursor: pointer;
+}
+
+.properties input[type="checkbox"] + .checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 27px;
+    height: 25px;
+    
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.properties input[type="checkbox"]:checked + .checkbox-indicator::before {
+    background-image: url("../img/checkbox-on.svg");
+}
+
+.properties input[type="checkbox"] + .checkbox-indicator {
+    opacity: 0.6;
+}
+
+.properties input[type="checkbox"]:hover + .checkbox-indicator {
+    opacity: 1;
+}
+
+.properties input[type="checkbox"]:disabled + .checkbox-indicator {
+    opacity: 0.3;
+}
+
 /*Каталог магазина*/
 
 .store-catalog {
@@ -1230,7 +1386,6 @@ input:invalid:not(:placeholder-shown) {
 
 .catalog {
     margin-top: 44px;
-/*    outline: 1px solid red;*/
 }
 
 .product-list {
@@ -1265,9 +1420,15 @@ input:invalid:not(:placeholder-shown) {
     width: 358px;
     height: 574px;
     border: none;
+    
+    user-select: none;
 }
 
-.product-list li::after {
+.product-list a {
+    user-select: none;
+}
+
+.product-list a::after {
     content: "";
     
     position: absolute;
@@ -1281,7 +1442,7 @@ input:invalid:not(:placeholder-shown) {
     border-radius: 4px 4px 0 0;
 }
 
-.product-list li:hover::after {
+.product-list a:hover::after {
     background-color: #4d4d4d;
 }
 
@@ -1387,4 +1548,65 @@ input:invalid:not(:placeholder-shown) {
     
     color: #ffffff;
     text-transform: uppercase;
+}
+
+/*Переключатель страниц*/
+
+.paginator {
+    width: 703px;
+    
+    margin-top: 27px;
+    margin-bottom: 60px;
+    
+    white-space: nowrap;
+    background-color: #ffffff;
+    
+    font-size: 0;
+    
+    user-select: none;
+}
+
+.paginator a {
+    display: inline-block;
+    
+    min-width: 30px;
+    height: 50px;
+    
+    margin-right: 11px;
+    padding: 0 10px;
+    
+    background-color: #eeeeee;
+    border-radius: 3px;
+    
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.paginator .disabled {
+    display: none;
+}
+
+.paginator .prev,
+.paginator .next {
+    padding: 0 75px;
+}
+
+.paginator .current {
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 3px #dbdbdb;
+}
+
+.paginator a:hover {
+    background-color: #dfdfdf;
+}
+
+.paginator a:active {
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
