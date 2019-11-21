@@ -1,0 +1,44 @@
+.social-list {
+  display: flex;
+  padding: 0;
+  margin-top: 23px;
+  list-style: none;
+
+  &__link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    margin-left: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    &__link--instagram,
+    &__link--facebook,
+    &__link--twitter {
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      transition-property: all;
+    }
+
+    &__link--instagram:hover,
+    &__link--facebook:hover,
+    &__link--twitter:hover {
+      fill: #69c6b4;
+    }
+
+    &__link--instagram:active,
+    &__link--facebook:active,
+    &__link--twitter:active {
+      opacity: 0.3;
+    }
+  }
+}

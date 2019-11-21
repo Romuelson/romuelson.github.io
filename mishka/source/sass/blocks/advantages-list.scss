@@ -1,0 +1,65 @@
+.advantages-list {
+  &__item {
+    position: relative;
+    padding-top: 83px;
+
+    &::before {
+      position: absolute;
+      top: 31px;
+      left: 9px;
+      content: "";
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(1)::before {
+      width: 33px;
+      height: 38px;
+      background-image: url("../img/icon-1.svg");
+    }
+
+    &:nth-child(2)::before {
+      width: 47px;
+      height: 27px;
+      background-image: url("../img/icon-3.svg");
+    }
+
+    &:nth-child(3)::before {
+      width: 34px;
+      height: 27px;
+      background-image: url("../img/icon-5.svg");
+    }
+
+    &:nth-child(4)::before {
+      width: 35px;
+      height: 34px;
+      background-image: url("../img/icon-2.svg");
+    }
+
+    &:nth-child(5)::before {
+      width: 55px;
+      height: 23px;
+      background-image: url("../img/icon-4.svg");
+    }
+
+    &:nth-child(6)::before {
+      width: 33px;
+      height: 32px;
+      background-image: url("../img/icon-6.svg");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 20px;
+    line-height: 26px;
+
+    &__item {
+      width: 334px;
+      height: 70px;
+    }
+  }
+}

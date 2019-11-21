@@ -1,0 +1,52 @@
+.page-catalog {
+  &__title {
+    display: inline-block;
+    width: 100%;
+    min-height: 176px;
+    padding: 0;
+    margin: 0;
+    font-size: 27px;
+    line-height: 176px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-catalog {
+    &__title {
+      position: relative;
+      min-height: 225px;
+      font-size: 46px;
+      line-height: 225px;
+      margin-bottom: 47px;
+
+      &::before {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 34px;
+        content: "";
+        background-image: url("../img/zigzag-fill-desktop.svg");
+        background-repeat: repeat-x;
+        background-position: bottom;
+        background-size: 768px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-catalog {
+    &__title {
+      font-size: 53px;
+
+      &::before {
+        bottom: -15px;
+        background-size: 1250px;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.header {
+  &__logo {
+    background-image: url("../img/mishka-logo-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__configuration {
+    box-sizing: border-box;
+    width: 320px;
+    height: 80px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__delivery {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    border-bottom: 1px solid #ececec;
+
+    &__logo {
+      background-image: url("../img/mishka-logo-tablet.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+
+    &__configuration {
+      width: 165px;
+      height: 89px;
+      border-bottom: none;
+    }
+
+    &__delivery {
+      position: absolute;
+      right: 50px;
+      bottom: -46px;
+      z-index: 1;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    &__logo {
+      position: absolute;
+      right: 43.5%;
+      cursor: pointer;
+      background-image: url("../img/mishka-logo-desktop.svg");
+      background-position: center center;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      transition-property: all;
+    }
+
+    &__logo:hover {
+      opacity: 0.6;
+    }
+
+    &__logo:active {
+      opacity: 0.3;
+    }
+
+    &__delivery {
+      right: 100px;
+    }
+  }
+}

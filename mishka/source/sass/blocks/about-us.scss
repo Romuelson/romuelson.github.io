@@ -1,0 +1,86 @@
+.about-us {
+  position: relative;
+  width: 320px;
+  margin-top: 69px;
+
+  &::before {
+    position: absolute;
+    top: -33px;
+    min-width: 320px;
+    height: 37px;
+    content: "";
+    background-image: url("../img/zigzag-line-desktop.svg");
+    background-repeat: repeat-x;
+    background-size: 320px;
+  }
+
+  &__title {
+    align-self: flex-start;
+    padding: 0;
+    padding-left: 30px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 25px;
+  }
+
+  &__list {
+    box-sizing: border-box;
+    width: 320px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0;
+    margin-bottom: 32px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    list-style: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+      width: 100%;
+      padding: 0;
+      margin-top: 48px;
+      font-size: 43px;
+      color: #000;
+    }
+
+    &__list {
+      padding: 0;
+      margin: 0;
+    }
+
+    &::before {
+      top: -35px;
+      left: -50px;
+      min-width: 768px;
+      content: "";
+      background-image: url("../img/zigzag-line-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 768px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    padding-left: 175px;
+
+    &::before {
+      left: 0;
+      min-width: 1052px;
+      background-size: 1052px;
+    }
+
+    &__title {
+      margin-bottom: 33px;
+      font-size: 53px;
+    }
+  }
+}

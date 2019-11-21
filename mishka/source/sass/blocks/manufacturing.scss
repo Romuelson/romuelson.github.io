@@ -1,0 +1,164 @@
+.manufacturing {
+  position: relative;
+  width: 100%;
+
+  &__link {
+    position: absolute;
+    top: 96px;
+    right: 30px;
+    display: block;
+    width: 260px;
+    height: 150px;
+    overflow: hidden;
+    line-height: 0;
+
+    &::before {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      width: 101px;
+      height: 77px;
+      margin-bottom: -38.5px;
+      margin-left: -50px;
+      content: "";
+      background-image: url("../img/play.svg");
+      background-repeat: no-repeat;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      transition-property: all;
+    }
+  }
+
+  &__wrapper {
+    box-sizing: border-box;
+    width: 260px;
+    padding-right: 34px;
+    padding-left: 34px;
+    margin: 0 auto;
+    border: 1px solid #ececec;
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 56px;
+    margin-top: 30px;
+    margin-bottom: 190px;
+    font-size: 17px;
+    line-height: 24px;
+
+    &::before {
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      width: 32px;
+      height: 22px;
+      margin-bottom: -11px;
+      content: "";
+      background-image: url("../img/video.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__description {
+    width: 192px;
+    margin-bottom: 29px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #444;
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .manufacturing {
+    margin-bottom: 50px;
+
+    &__link {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 668px;
+      height: auto;
+    }
+
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 41px;
+      font-size: 20px;
+    }
+
+    &__title br {
+      display: none;
+    }
+
+    &__description {
+      width: auto;
+      margin-bottom: 40px;
+      font-size: 15px;
+    }
+
+    &__button {
+      margin-bottom: 46px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .manufacturing {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link {
+      width: 682px;
+    }
+
+    &__link:hover {
+      &::before {
+        transform: scale(1.2);
+      }
+    }
+
+    &__link:active {
+      &::before {
+        transform: scale(0.8);
+      }
+    }
+
+    &__wrapper {
+      display: inline-block;
+      width: 368px;
+      padding-right: 57px;
+      padding-left: 80px;
+    }
+
+    &__title {
+      padding-top: 56px;
+      padding-left: 0;
+      margin-top: 47px;
+
+      &::before {
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 22px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__description {
+      margin-bottom: 51px;
+      line-height: inherit;
+    }
+
+    &__button {
+      margin-bottom: 33px;
+    }
+  }
+}

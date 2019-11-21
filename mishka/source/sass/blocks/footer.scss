@@ -1,0 +1,57 @@
+.footer {
+  display: flex;
+  width: 100%;
+  margin-top: 39px;
+  background-color: #f1f1f1;
+
+  &__logo {
+    display: none;
+  }
+
+  &__social {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 260px;
+      height: 1px;
+      margin-left: -52px;
+      content: "";
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    margin-top: 10px;
+
+    &__logo {
+      display: block;
+      width: 100px;
+      height: 34px;
+    }
+
+    &__logotype {
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      transition-property: all;
+    }
+
+    &__logo:hover &__logotype {
+      fill: #69c6b4;
+    }
+
+    &__logo:active &__logotype {
+      opacity: 0.3;
+    }
+
+    &__social {
+      &::before {
+        border: none;
+      }
+    }
+  }
+}

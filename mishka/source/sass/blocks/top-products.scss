@@ -1,0 +1,336 @@
+.top-products {
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    box-sizing: border-box;
+    width: 320px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  &__title {
+    padding: 0;
+    padding-top: 35px;
+    padding-bottom: 7px;
+    margin: 0;
+    font-size: 25px;
+    line-height: 15px;
+  }
+
+  &__subtitle {
+    font-size: 17px;
+    font-weight: bold;
+    color: #63d1bb;
+    text-transform: uppercase;
+  }
+
+  &__descriprion {
+    width: 250px;
+    margin-top: 19px;
+    margin-bottom: 16px;
+    line-height: 24px;
+    color: #444;
+  }
+
+  &__information {
+    width: 100%;
+    margin-bottom: 28px;
+    color: #444;
+    border-collapse: collapse;
+  }
+
+  &__paragraph {
+    height: 40px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__value {
+    padding-right: 12px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 18px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 41px;
+  }
+
+  &__wrapper-information {
+    width: 260px;
+    height: 315px;
+    background-image: url("../img/triple-set-desktop.png");
+    background-repeat: repeat-x;
+    background-size: 260px 315px;
+  }
+
+  &__modal-transparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__modal-transparent:target {
+    display: block;
+    pointer-events: auto;
+  }
+
+  &__modal-close {
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: 1px solid red;
+  }
+
+  &__modal-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 338px;
+    margin-top: -169px;
+    margin-left: -160px;
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &__modal-title {
+    display: inline-block;
+    width: 155px;
+    margin-top: 36px;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__modal-description {
+    margin-bottom: 35px;
+    line-height: 0;
+    color: #444;
+  }
+
+  &__modal-window-form input[type="radio"] {
+    display: none;
+  }
+
+  &__modal-sizes {
+    text-align: center;
+  }
+
+  &__modal-sizes label {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 82px;
+    height: 52px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 52px;
+    cursor: pointer;
+    border: 2px solid #ececec;
+  }
+
+  &__modal-sizes label:not(:last-child) {
+    margin-right: 3px;
+  }
+
+  #btn-1:checked ~ &__modal-sizes label[for="btn-1"],
+  #btn-2:checked ~ &__modal-sizes label[for="btn-2"],
+  #btn-3:checked ~ &__modal-sizes label[for="btn-3"] {
+    border: 2px solid #63d1bb;
+  }
+
+  &__modal-button {
+    width: 260px;
+    height: 52px;
+    margin-top: 31px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #63d1bb;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .top-products {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &__title-wrapper {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__title {
+      padding-top: 58px;
+      margin-left: -3px;
+      font-size: 43px;
+      line-height: 20px;
+    }
+
+    &__subtitle {
+      width: 75px;
+      padding-top: 55px;
+      padding-right: 26px;
+      line-height: 17px;
+      text-align: center;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      height: 250px;
+      margin-top: 25px;
+    }
+
+    &__description {
+      width: 285px;
+      margin-top: 36px;
+      font-size: 17px;
+      line-height: 29px;
+      color: #444;
+    }
+
+    &__information {
+      width: 285px;
+    }
+
+    &__wrapper-information {
+      display: flex;
+      width: 333px;
+      height: 400px;
+      margin-top: 50px;
+      background-size: 333px 404px;
+    }
+
+    &__wrapper-information-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 290px;
+      margin-top: -127px;
+    }
+
+    &__price {
+      padding-bottom: 19px;
+      font-size: 20px;
+    }
+
+    &__modal-title {
+      width: 350px;
+      margin-top: 50px;
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__modal-window {
+      width: 568px;
+      margin-left: -284px;
+    }
+
+    &__modal-sizes label {
+      width: 115px;
+    }
+
+    &__modal-sizes label:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &__modal-button {
+      width: 350px;
+      height: 52px;
+      margin-top: 31px;
+      font-size: 17px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: #63d1bb;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .top-products {
+    margin-bottom: 50px;
+
+    &__wrapper {
+      flex-direction: column;
+      width: 875px;
+      min-height: 651px;
+      margin-left: 175px;
+    }
+
+    &__title-wrapper {
+      position: relative;
+      padding-top: 82px;
+    }
+
+    &__title {
+      font-size: 53px;
+    }
+
+    &__subtitle {
+      position: absolute;
+      left: -125px;
+    }
+
+    &__container {
+      padding-bottom: 100px;
+    }
+
+    &__descriprion {
+      margin-bottom: 0;
+    }
+
+    &__information {
+      margin-top: 0;
+    }
+
+    &__wrapper-information {
+      position: absolute;
+      top: 20px;
+      right: 100px;
+      z-index: -1;
+      width: 525px;
+      height: 636px;
+      background-size: 525px 636px;
+    }
+
+    &__wrapper-information-wrapper {
+      justify-content: flex-end;
+      margin: 0;
+      margin-top: 51px;
+    }
+  }
+}

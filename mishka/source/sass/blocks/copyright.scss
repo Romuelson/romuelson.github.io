@@ -1,0 +1,39 @@
+
+.copyright {
+  &__link {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 180px;
+    height: 34px;
+    padding-right: 60px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 34px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    width: 27px;
+    height: 34px;
+    fill: #63d1bb;
+    stroke: #63d1bb;
+    stroke-miterlimit: 10;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    transition-property: all;
+  }
+
+  &__link:hover &__icon {
+    fill: #46c1ae;
+    stroke: #46c1ae;
+  }
+
+  &__link:active,
+  &__link:active &__icon {
+    opacity: 0.3;
+  }
+}

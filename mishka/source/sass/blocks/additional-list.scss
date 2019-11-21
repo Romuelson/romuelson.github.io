@@ -1,0 +1,14 @@
+.additional-list {
+  display: none;
+  height: 50px;
+  outline: 1px solid red;
+}
+
+@media (min-width: $desktop-width) {
+  .additional-list {
+    position: absolute;
+    bottom: -40px;
+    z-index: 1;
+    display: flex;
+  }
+}

@@ -1,0 +1,43 @@
+.button {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.button-mobile {
+  box-sizing: border-box;
+  display: block;
+  width: 260px;
+  height: 52px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 48px;
+  text-transform: uppercase;
+  border: 2px solid #444;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: all;
+  }
+
+  .button-mobile {
+    width: 290px;
+  }
+
+  .button--interaction:hover {
+    color: #fff;
+    background-color: #444;
+  }
+
+  .button--interaction:active {
+    color: #7c7c7c;
+  }
+}

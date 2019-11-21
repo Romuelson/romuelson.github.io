@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  // outline: 1px solid black;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 768px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1250px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}

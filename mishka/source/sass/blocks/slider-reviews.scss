@@ -1,0 +1,125 @@
+.slider-reviews {
+  &__title {
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+  }
+
+  &__description {
+    padding: 0;
+    padding-bottom: 23px;
+    margin: 0;
+    color: #444;
+  }
+
+  &__user-name {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  &__button-wrapper {
+    margin-top: 29px;
+    border: 1px solid #ececec;
+  }
+
+  &__toggle {
+    box-sizing: border-box;
+    width: 127px;
+    height: 52px;
+    background-image: url("../img/huge-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:last-child {
+      border-right: 1px solid #ececec;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button {
+    margin-top: -3px;
+    margin-bottom: 70px;
+    color: #444;
+  }
+
+  &__images {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider-reviews {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      padding-top: 88px;
+      padding-bottom: 15px;
+      font-size: 43px;
+    }
+
+    &__description {
+      padding-bottom: 15px;
+      font-size: 17px;
+    }
+
+    &__images {
+      position: absolute;
+      top: 0;
+      left: -50px;
+      z-index: -1;
+      display: block;
+    }
+
+    &__button {
+      position: absolute;
+      top: 83px;
+      right: 0;
+      width: 175px;
+    }
+
+    &__toggle {
+      width: 80px;
+    }
+
+    &__button-wrapper,
+    &__toggle:last-child {
+      border: none;
+    }
+
+    &__button-wrapper {
+      position: absolute;
+      right: 6px;
+      bottom: 40px;
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider-reviews {
+    &__title {
+      font-size: 53px;
+    }
+
+    &__description {
+      width: 770px;
+    }
+
+    &__images {
+      left: -175px;
+    }
+
+    &__toggle:hover {
+      opacity: 0.6;
+    }
+
+    &__toggle:active {
+      opacity: 0.3;
+    }
+  }
+}

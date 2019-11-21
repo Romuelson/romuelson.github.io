@@ -1,0 +1,204 @@
+.production {
+  width: 100%;
+  background-color: #fafafa;
+  background-image: url("../img/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center -18px;
+  background-size: 385px;
+
+  &__title {
+    padding-top: 70px;
+    padding-right: 30px;
+    padding-bottom: 27px;
+    padding-left: 30px;
+    margin: 0 auto;
+    margin-bottom: 95px;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &__item {
+      flex-grow: 1;
+      width: 100%;
+      height: 103px;
+
+      &:first-child {
+        background-color: #63d1bb;
+      }
+
+      &:nth-child(2) {
+        background-color: #56c3b2;
+      }
+    }
+
+    &__link {
+      padding-top: 25px;
+      padding-right: 100px;
+      padding-bottom: 30px;
+      padding-left: 30px;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 24px;
+      color: #fff;
+      text-decoration: none;
+
+      &--decoration::before,
+      &--baby::before {
+        position: absolute;
+        content: "";
+        background-repeat: no-repeat;
+        opacity: 0.2;
+      }
+
+      &--decoration::before {
+        top: 23px;
+        right: 35px;
+        width: 40px;
+        height: 62px;
+        background-image: url("../img/interior.svg");
+      }
+
+      &--baby::before {
+        top: 21px;
+        right: 27px;
+        width: 60px;
+        height: 60px;
+        background-image: url("../img/toy.svg");
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .production {
+    position: relative;
+    background-position: center 0;
+    background-size: 768px;
+
+    &__navigation {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 745px;
+    }
+
+    &__title {
+      padding-top: 151px;
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: -5px;
+      z-index: 1;
+      width: 100%;
+      height: 34px;
+      content: "";
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-size: 768px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: row;
+
+      &__link {
+        padding-top: 28px;
+        padding-left: 35px;
+        line-height: 30px;
+      }
+
+      &__item {
+        width: 334px;
+        height: 120px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .production {
+    background-size: 768px;
+
+    &__navigation {
+      min-height: 745px;
+    }
+
+    &::before {
+      bottom: -15px;
+      background-size: 1250px;
+    }
+
+    &__title {
+      font-size: 53px;
+      line-height: 58px;
+    }
+
+    &-list {
+      &__item {
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+      }
+
+      &__item:hover {
+        height: 125px;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+        transition-property: all;
+
+        &:first-child {
+          background-color: #59d5bc;
+        }
+
+        &:nth-child(2) {
+          background-color: #46c1ae;
+        }
+      }
+
+      .production-list__item .production-list__link {
+        &--decoration::before,
+        &--baby::before {
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+          transition-property: all;
+        }
+      }
+
+      .production-list__item:hover .production-list__link {
+        &--decoration::before,
+        &--baby::before {
+          opacity: 0.5;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+          transition-property: all;
+        }
+      }
+
+      .production-list__item:active .production-list__link {
+        opacity: 0.3;
+
+        &--decoration::before,
+        &--baby::before {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
