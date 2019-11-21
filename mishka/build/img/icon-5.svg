@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="27" viewBox="0 0 34 27">
+  <defs>
+    <style>
+      .icon-5 {
+        fill: #69c6b4;
+      }
+    </style>
+  </defs>
+  <path class="icon-5" d="M33.05,8.74A8.74,8.74,0,0,0,16.52,4.79,8.73,8.73,0,0,0,0,8.74c0,9.12,14.66,19.12,16.52,19.12S33.05,17.91,33.05,8.74Z"/>
+</svg>
