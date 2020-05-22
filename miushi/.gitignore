@@ -1,0 +1,7 @@
+.DS_Store
+.DS_Store?
+build
+node_modules
+package-lock.json
+Thumbs.db
+._*
