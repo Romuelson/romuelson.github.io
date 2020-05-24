@@ -1,51 +1,51 @@
-header.header
-  div.container
-    h1 Магазин суши
-    h2 Главная
-    nav.header__navigation.navigation
-      h3 Навигация по сайту
-      ul.navigation__site
-        li
-          a(href="#!") Меню
-        li
-          a(href="#!") Акции и скидки
-        li
-          a(href="#!") Доставка и оплата
-        li
-          a(href="#!") Новости
-        li
-          a(href="#!") Контакты
-      ul.navigation__user
-        li
-          a(href="#!") Кабинет
-        li
-          a(href="#!") Корзина
-    section.header__contacts.contacts
-      h3 Контактная информация
-      ul
-        li.contacts__address г. Нижний Тагил, ул. Ленина, д. 3
-        li.contacts__mail
-          a(href="mailto:Romanch030@mail.ru") Romanch030@mail.ru
-        li.contacts__tel
-          a(href="tel:+78003332222") +7 (800) 333 2 222
-          br
-          span.contacts__working Работаем с 11.00 до 23.00
-      a(class="contacts__logo logo" href="index.html")
-        img(class="logo__image" src="#!", alt="Логотип сайта")
-    section.header__slider.slider
-      h3 Баннер сайта
-      div.slider__discount
-        a.discount__title Скидка 15%
-      div.slider__wrapper
-        img(src="#!", alt="Изображение суши")
+header.header.container
+  h1.visually-hidden Магазин суши
+  h2.visually-hidden Главная
+  nav.navigation.navigation--opened
+    button(class="navigation__toggle button" type="button")
+    h3.visually-hidden Навигация по сайту
+    ul.navigation__site.navigation__list.list
+      li
+        a(href="#!") Меню
+      li
+        a(href="#!") Акции и скидки
+      li
+        a(href="#!") Доставка и оплата
+      li
+        a(href="#!") Новости
+      li
+        a(href="#!") Контакты
+    ul.navigation__user.navigation__list.list
+      li
+        a(href="#!") Кабинет
+      li
+        a(href="#!") Корзина
+  section.contacts.visually-hidden
+    h3.visually-hidden Контактная информация
+    ul.list
+      li.contacts__address г. Нижний Тагил, ул. Ленина, д. 3
+      li.contacts__mail
+        a(href="mailto:Romanch030@mail.ru") Romanch030@mail.ru
+      li.contacts__tel
+        a(href="tel:+78003332222") +7 (800) 333 2 222
         br
-        a Счастливые часы
-        br
-        span с 11:00 до 16:00 в будние дни
-        br
-        a(href="#!" class="slider__link") Подробнее
-      div.slider__button
-        button(class="button__toggle" type="button")
-          span Назад
-        button(class="button__toggle" type="button")
-          span Вперед
+        span.contacts__working Работаем с 11.00 до 23.00
+    a(class="contacts__logo logo" href="index.html")
+      img(class="logo__image" src="#!", alt="Логотип сайта")
+  section.slider.visually-hidden
+    h3.visually-hidden Баннер сайта
+    div.slider__discount
+      a.discount__title Скидка 15%
+    div.slider__wrapper
+      img(src="#!", alt="Изображение суши")
+      br
+      a Счастливые часы
+      br
+      span с 11:00 до 16:00 в будние дни
+      br
+      a(href="#!" class="slider__link") Подробнее
+    div.slider__button
+      button(class="button__toggle" type="button")
+        span Назад
+      button(class="button__toggle" type="button")
+        span Вперед

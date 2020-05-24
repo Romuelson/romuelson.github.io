@@ -459,7 +459,7 @@
         "selector-max-empty-lines": [0, {
             "message": "Пустые строки в селекторах недопустимы"
         }],
-        "selector-list-comma-newline-after": ["never-multi-line", {
+        "selector-list-comma-newline-after": ["always-multi-line", {
             "message": "После запятой необходим перенос строки"
         }],
         "selector-list-comma-newline-before": ["never-multi-line", {

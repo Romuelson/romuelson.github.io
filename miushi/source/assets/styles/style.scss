@@ -1,4 +1,10 @@
 @import "./layouts/base.scss";
 @import "./layouts/variables.scss";
+@import "./layouts/container.scss";
 
-@import "./blocks/menu.scss";
+@import "./blocks/header/header.scss";
+@import "./blocks/navigation/navigation.scss";
+@import "./blocks/button/button.scss";
+@import "./blocks/contacts/contacts.scss";
+@import "./blocks/main/main.scss";
+@import "./blocks/footer/footer.scss";

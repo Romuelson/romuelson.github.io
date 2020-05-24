@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../font/open-sans/open-sans-latin_cyrillic-regular.eot");
+  src: local("Open Sans Regular"),
+    local("OpenSans-Regular"),
+    url("../font/open-sans/open-sans-latin_cyrillic-regular.eot?iefix") format("embedded-opentype"),
+    url("../font/open-sans/open-sans-latin_cyrillic-regular.woff2"),
+    url("../font/open-sans/open-sans-latin_cyrillic-regular.woff"),
+    url("../font/open-sans/open-sans-latin_cyrillic-regular.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../font/open-sans/open-sans-latin_cyrillic-600.eot");
+  src: local("Open Sans SemiBold"),
+    local("OpenSans-SemiBold"),
+    url("../font/open-sans/open-sans-latin_cyrillic-600.eot?iefix") format("embedded-opentype"),
+    url("../font/open-sans/open-sans-latin_cyrillic-600.woff2"),
+    url("../font/open-sans/open-sans-latin_cyrillic-600.woff"),
+    url("../font/open-sans/open-sans-latin_cyrillic-600.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../font/open-sans/open-sans-latin_cyrillic-700.eot");
+  src: local("Open Sans SemiBold"),
+    local("OpenSans-SemiBold"),
+    url("../font/open-sans/open-sans-latin_cyrillic-700.eot?iefix") format("embedded-opentype"),
+    url("../font/open-sans/open-sans-latin_cyrillic-700.woff2"),
+    url("../font/open-sans/open-sans-latin_cyrillic-700.woff"),
+    url("../font/open-sans/open-sans-latin_cyrillic-700.ttf");
+}
