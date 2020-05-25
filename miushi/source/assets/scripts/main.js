@@ -1,6 +1,12 @@
 'use strict';
 
 ;(function () {
+  // js-no-js
+  var javaScript = document.querySelector('.html');
+  javaScript.classList.add('js');
+  javaScript.classList.remove('no-js');
+
+  // navigation popup
   var navigation = document.querySelector('.navigation');
   var navigationToggle = document.querySelector('.navigation__toggle');
 
