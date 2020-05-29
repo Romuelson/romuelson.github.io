@@ -6,7 +6,7 @@
   javaScript.classList.add('js');
   javaScript.classList.remove('no-js');
 
-  // navigation popup
+  // navigation
   var navigation = document.querySelector('.navigation');
   var navigationToggle = document.querySelector('.navigation__toggle');
 

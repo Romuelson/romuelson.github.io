@@ -1,8 +1,15 @@
 .header {
+  // position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  // background-color: tomato;
 }
 
-@media (min-width: $tablet-width) {
-}
+// @media (min-width: $tablet-width) {
+// }
 
 @media (min-width: $desktop-width) {
+  .header {
+    grid-template-columns: 1fr 1200px 1fr;
+  }
 }

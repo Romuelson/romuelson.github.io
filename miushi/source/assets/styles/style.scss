@@ -1,8 +1,11 @@
 @import "./layouts/base.scss";
 @import "./layouts/variables.scss";
 @import "./layouts/container.scss";
+@import "./layouts/font.scss";
 
 @import "./blocks/header/header.scss";
+@import "./blocks/logo/logo.scss";
+@import "./blocks/slider/slider.scss";
 @import "./blocks/navigation/navigation.scss";
 @import "./blocks/button/button.scss";
 @import "./blocks/contacts/contacts.scss";

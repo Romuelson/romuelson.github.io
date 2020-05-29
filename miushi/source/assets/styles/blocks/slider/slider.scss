@@ -1,0 +1,51 @@
+.slider {
+  display: grid;
+  justify-content: center;
+  min-height: 288px;
+  overflow: hidden;
+  background-color: rgba(58, 43, 59, 0.3);
+
+  &__template {
+    width: 767px;
+    height: 240px;
+    background-image: url("/images/slider-image-sushi.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 767px 240px;
+  }
+
+  &__title {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    font-family: "Lemon Tuesday", fantasy;
+    font-size: 49px;
+    line-height: 60px;
+    color: #84c604;
+    letter-spacing: -0.8px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    &__template {
+      width: 1200px;
+      height: 418px;
+      background-image: url("/images/slider-image-sushi-tablet.png");
+      background-size: 1200px 418px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    grid-column: 1 / 4;
+
+    &__template {
+      width: 1920px;
+      height: 675px;
+      background-image: url("/images/slider-image-sushi-desktop.png");
+      background-size: 1920px 675px;
+    }
+  }
+}

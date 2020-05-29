@@ -44,9 +44,9 @@ paths = {
     watch: './source/assets/images/svg/*.svg'
   },
   fonts: {
-    src: './source/assets/fonts/**/*.{woff,woff2}',
+    src: './source/assets/fonts/**/*.{eot,ttf,woff,woff2}',
     dest: './build/fonts/',
-    watch: './source/assets/fonts/**/*.{woff,woff2}'
+    watch: './source/assets/fonts/**/*.{eot,ttf,woff,woff2}'
   },
   favicons: {
     src: './source/assets/images/favicon/*.{jpg,jpeg,png,gif,tiff}',
