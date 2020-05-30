@@ -1,32 +1,34 @@
 .logo {
-  // width: 100%;
-  grid-column: 2 / 3;
   overflow: hidden;
-  // background-color: rgb(60, 255, 0);
   background-image: url("/images/svg/miushi-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 46px 46px;
-  // position: absolute;
-  // top: 0;
-  // left: 50%;
-  // display: block;
-  // width: auto;
-  // height: 56px;
-  // margin: 0 auto;
-  // margin-left: -28px;
-  
 }
 
-// @media (max-width: $onli-mobile-width) {
-//   .js .navigation--opened .logo {
-//     display: none;
-//   }
-// }
+@media (max-width: $onli-tablet-width) {
+  .navigation--opened .logo {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .logo {
+    // grid-column: 2 / 3;
+  }
+}
 
 @media (min-width: $tablet-width) {
   .logo {
+    // grid-column: 1 / 2;
+    // order: -1;
     background-image: url("/images/svg/miushi-logo-desktop.svg");
     background-size: 160px 160px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    order: -1;
   }
 }
