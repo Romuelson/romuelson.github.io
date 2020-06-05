@@ -1,10 +1,20 @@
 .header {
-  display: grid;
-  grid-template-columns: 1fr;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 @media (min-width: $desktop-width) {
-  .header {
-    grid-template-columns: 1fr 1200px 1fr;
-  }
+    .header {
+        grid-template-columns: 1fr 1200px 1fr;
+    }
+
+    .header::before {
+        position: absolute;
+        top: 98px;
+        width: 100%;
+        pointer-events: none;
+        content: "";
+        border-top: 1px solid #f2f2f2;
+    }
 }

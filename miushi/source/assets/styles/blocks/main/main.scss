@@ -1,10 +1,10 @@
 .main {
-  display: grid;
+    display: grid;
 
-  &__item {
-    min-height: 570px;
-    background-color: rgba(0, 0, 0, 0.493);
-  }
+    &__item {
+        min-height: 570px;
+        background-color: rgba(0, 0, 0, 0.493);
+    }
 }
 
 @media (min-width: $tablet-width) {

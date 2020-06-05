@@ -1,47 +1,47 @@
 html,
 body {
-  min-width: 320px;
+    min-width: 320px;
 
-  padding: 0;
-  margin: 0 auto;
+    padding: 0;
+    margin: 0 auto;
   
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  line-height: 30px;
-  color: #000;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 30px;
+    color: #000;
 
-  background-color: #fff;
+    background-color: #fff;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
 }
 
 .list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   
-  a {
-    color: #000;
-    text-decoration: none;
-  }
+    a {
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 .link {
-  height: 100%;
-  color: #000;
-  text-decoration: none;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
 }

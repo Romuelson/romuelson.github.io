@@ -4,14 +4,14 @@
         "stylelint-order"
     ],
     "rules": {
-        "indentation": 2,
+        "indentation": 4,
         "order/properties-order": [
             [{
                 "properties": [
                     "all"
                 ]
             },
-            {
+            {  
                 "properties": [
                     "position",
                     "top",

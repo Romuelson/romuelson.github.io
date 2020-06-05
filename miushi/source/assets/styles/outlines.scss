@@ -1,25 +1,25 @@
 html,
 body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 body {
-  min-width: 320px;
-  border: 2px dashed #fa5858;
+    min-width: 320px;
+    border: 2px dashed #fa5858;
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
 }
 
 // html::before,
@@ -27,71 +27,71 @@ body::before,
 header::before,
 footer::before,
 main::before {
-  color: #7fc1ff;
+    color: #7fc1ff;
 }
 
 main,
 header,
 footer {
-  background-color: #f3faff;
-  border: 2px solid #7fc1ff;
+    background-color: #f3faff;
+    border: 2px solid #7fc1ff;
 }
 
 nav,
 section,
 article,
 aside {
-  background-color: #f9f7ff;
-  border: 2px solid #9779ec;
+    background-color: #f9f7ff;
+    border: 2px solid #9779ec;
 }
 
 nav::before,
 section::before,
 article::before,
 aside::before {
-  color: #9779ec;
+    color: #9779ec;
 }
 
 h1 {
-  font-size: 18px;
-  background-color: #ffffff;
-  border: 2px solid #ff994f;
+    font-size: 18px;
+    background-color: #ffffff;
+    border: 2px solid #ff994f;
 }
 
 h1::before {
-  content: "h1";
-  color: #ff994f;
+    color: #ff994f;
+    content: "h1";
 }
 
 p {
-  background-color: #ffffff;
-  border: 2px solid #f36dff;
+    background-color: #ffffff;
+    border: 2px solid #f36dff;
 }
 
 p::before {
-  color: #f36dff;
-  content: "p";
+    color: #f36dff;
+    content: "p";
 }
 
 *:not(html) {
-  position: relative;
-  padding: 25px 25px 20px;
-  margin: 0;
-  border-radius: 4px;
+    position: relative;
+    padding: 25px 25px 20px;
+    margin: 0;
+    border-radius: 4px;
 }
 
 *:not(:last-child) {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 *::before {
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 10px;
-  letter-spacing: 0.04em;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 10px;
+    letter-spacing: 0.04em;
 }
 
 // html::before {
@@ -99,33 +99,33 @@ p::before {
 // }
 
 body::before {
-  content: "body";
+    content: "body";
 }
 
 main::before {
-  content: "main";
+    content: "main";
 }
 
 header::before {
-  content: "header";
+    content: "header";
 }
 
 footer::before {
-  content: "footer";
+    content: "footer";
 }
 
 section::before {
-  content: "section";
+    content: "section";
 }
 
 article::before {
-  content: "article";
+    content: "article";
 }
 
 aside::before {
-  content: "aside";
+    content: "aside";
 }
 
 nav::before {
-  content: "nav";
+    content: "nav";
 }
