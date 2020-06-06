@@ -5,7 +5,6 @@ header.header.container
         h3.visually-hidden Навигация по сайту
         button(class="navigation__toggle button" type="button")
         a(class="logo" href="index.html")
-             //-   img(class="logo__image" src="images/svg/miushi-logo.svg" alt="Логотип сайта")
         ul.navigation__site.navigation__list.list
             li.navigation__item
                 a(class="navigation__link" href="#!") Меню          
@@ -49,14 +48,24 @@ header.header.container
                         a(class="contacts__link contacts__button" href="#!") Обратный звонок
     section.slider
         h3.visually-hidden Баннер сайта
-        //- div.slider__discount
-        //-     a.discount__title Скидка 15%
-        div.slider__template
-        //-     a.slider__title Счастливые<br>часы
-        //-     br
-        //-     span с 11:00 до 16:00 в будние дни
-        //-     br
-        //-     a(href="#!" class="slider__link") Подробнее
+        div.slider__products
+            template(id="slider__template" style="display: none")
+                div.slider__item
+                    h1.slider__title
+                    p.slider__subtitle
+                    span.slider__discount
+                    picture
+                        source(class="slider__image--desktop" media="(min-width:1200px)" srcset="")
+                        source(class="slider__image--tablet" media="(min-width:768px)" srcset="")
+                        img(class="slider__image" src="")
+                    a(class="slider__link" href="#!") Подробнее
+        div.slider__controls
+            label
+                input(class="slider__toggle" type="radio" name="toggle" checked)
+            label
+                input(class="slider__toggle" type="radio" name="toggle")
+            label
+                input(class="slider__toggle" type="radio" name="toggle")
         //- div.slider__button
         //-     button(class="button__toggle" type="button")
         //-     span Назад

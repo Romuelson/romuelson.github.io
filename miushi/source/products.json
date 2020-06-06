@@ -1,0 +1,11 @@
+{
+    "1337": {
+        "name": "Сет №1",
+        "amount": "100",
+        "weight": "740",
+        "calories":  "790",
+        "cost": "510",
+        "type": "set",
+        "image": "images/image.png"
+    }
+}
