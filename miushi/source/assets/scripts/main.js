@@ -1,6 +1,21 @@
 'use strict';
 
-(function () {
+!(function () {
+    /* Функция перемешивания массива по алгоритму Фишера-Йетса*/
+
+    window.shuffle = function(arr) {
+        var j, temp;
+        for(var i = 0; i < arr.length; i++) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        return arr;
+    }
+})();
+
+!(function () {
     // js-no-js
     var javaScript = document.querySelector('.html');
     javaScript.classList.add('js');
@@ -24,90 +39,101 @@
     });
 })();
 
-(function () {
-    var MAX_SLIDER_ITEM = 3;
-    
-    Array.prototype.getRandomValue = function() {
+!(function () {
+    var sliderProducts = document.querySelector('.slider__products');
+    var sliderTemplate = document.querySelector('#slider__template').content.querySelector('.slider__item');
+
+    var MAX_SLIDE = 3;
+    Array.prototype.randomValue = function() {
         return this[Math.floor(Math.random() * this.length)];
     };
 
     /* Mock-объект слайдера */
+
     var sliderData = [
         {
             title: 'Счастливые часы',
             subtitle: 'с 11 до 16 в будние дни',
             discount: '15',
-            image: 'images/image.png',
-            imageTablet: 'images/image-tablet.png',
-            imageDesktop: 'images/image-desktop.png'
+            image: 'images/slider/slider-image-sushi.png',
+            imageTablet: 'images/slider/slider-image-sushi-tablet.png',
+            imageDesktop: 'images/slider/slider-image-sushi-desktop.png'
         },
         {
-            title: 'Аксиома силлог',
-            subtitle: 'согласно мнению известных философов',
-            discount: '20',
-            image: 'images/image.png',
-            imageTablet: 'images/image-tablet.png',
-            imageDesktop: 'images/image-desktop.png'
+            title: 'Счастливые часы',
+            subtitle: 'с 11 до 16 в будние дни',
+            discount: '15',
+            image: 'images/slider/2slider-image-sushi.png',
+            imageTablet: 'images/slider/2slider-image-sushi-tablet.png',
+            imageDesktop: 'images/slider/2slider-image-sushi-desktop.png'
         },
         {
-            title: 'Структурализм абстрактен',
-            subtitle: 'осмысляет дедуктивный метод',
-            discount: '37',
-            image: 'images/image.png',
-            imageTablet: 'images/image-tablet.png',
-            imageDesktop: 'images/image-desktop.png'
+            title: 'Счастливые часы',
+            subtitle: 'с 11 до 16 в будние дни',
+            discount: '15',
+            image: 'images/slider/3slider-image-sushi.png',
+            imageTablet: 'images/slider/3slider-image-sushi-tablet.png',
+            imageDesktop: 'images/slider/3slider-image-sushi-desktop.png'
         },
         {
-            title: 'Гедонизм осмысляет',
-            subtitle: 'следовательно, творит данн',
-            discount: '84',
-            image: 'images/image.png',
-            imageTablet: 'images/image-tablet.png',
-            imageDesktop: 'images/image-desktop.png'
+            title: 'Счастливые часы',
+            subtitle: 'с 11 до 16 в будние дни',
+            discount: '15',
+            image: 'images/slider/4slider-image-sushi.png',
+            imageTablet: 'images/slider/4slider-image-sushi-tablet.png',
+            imageDesktop: 'images/slider/4slider-image-sushi-desktop.png'
         },
         {
-            title: 'Сомнение рефлектирует',
-            subtitle: 'амбивалентно транспонирует',
-            discount: '14',
-            image: 'images/image.png',
-            imageTablet: 'images/image-tablet.png',
-            imageDesktop: 'images/image-desktop.png'
+            title: 'Счастливые часы',
+            subtitle: 'с 11 до 16 в будние дни',
+            discount: '15',
+            image: 'images/slider/5slider-image-sushi.png',
+            imageTablet: 'images/slider/5slider-image-sushi-tablet.png',
+            imageDesktop: 'images/slider/5slider-image-sushi-desktop.png'
         },
         {
-            title: 'Созерцание непредсказуемо',
-            subtitle: 'решительно представляет',
-            discount: '22',
-            image: 'images/image.png',
-            imageTablet: 'images/image-tablet.png',
-            imageDesktop: 'images/image-desktop.png'
+            title: 'Счастливые часы',
+            subtitle: 'с 11 до 16 в будние дни',
+            discount: '15',
+            image: 'images/slider/6slider-image-sushi.png',
+            imageTablet: 'images/slider/6slider-image-sushi-tablet.png',
+            imageDesktop: 'images/slider/6slider-image-sushi-desktop.png'
         }
     ];
 
-    var sliderProductsList = document.querySelector('.slider__products');
-    var sliderTemplateItem = document.querySelector('#slider__template').content.querySelector('.slider__item');
+    /* Прототип слайдера */
 
-    var sliderRanderItem = function(sliderElement) {
-        var sliderItem = sliderTemplateItem.cloneNode(true);
+    class Slider {
+        constructor(data) {
+            this.documentObject = this.render(data);
+        }
+        render(data) {
+            var sliderItem = sliderTemplate.cloneNode(true);
+            sliderItem.querySelector('.slider__title').textContent = data.title;
+            sliderItem.querySelector('.slider__subtitle').textContent = data.subtitle;
+            sliderItem.querySelector('.slider__discount').textContent = data.discount;
+            sliderItem.querySelector('.slider__image').src = data.image;
+            sliderItem.querySelector('.slider__image--tablet').srcset = data.imageTablet;
+            sliderItem.querySelector('.slider__image--desktop').srcset = data.imageDesktop;
+            return sliderItem;
+        }
+    }
 
-        sliderItem.querySelector('.slider__title').textContent = sliderElement.title;
-        sliderItem.querySelector('.slider__subtitle').textContent = sliderElement.subtitle;
-        sliderItem.querySelector('.slider__discount').textContent = sliderElement.discount;
-        sliderItem.querySelector('.slider__image').src = sliderElement.image;
-        sliderItem.querySelector('.slider__image--tablet').srcset = sliderElement.imageTablet;
-        sliderItem.querySelector('.slider__image--desktop').srcset = sliderElement.imageDesktop;
-
-        return sliderItem;
-    };
-
-    var sliderGenerateItem = function() {
+    var generation = function(amount) {
         var fragment = document.createDocumentFragment();
-
-        for (var i = 0; i < MAX_SLIDER_ITEM; i++) {
-            fragment.appendChild(sliderRanderItem(sliderData.getRandomValue()));
+        var shuffleData = shuffle(sliderData);
+        for (var i = 0; i < amount; i++) {
+            fragment.appendChild(new Slider(shuffleData[i]).documentObject);
         }
 
-        sliderProductsList.appendChild(fragment);
-    };
+        sliderProducts.appendChild(fragment);
+    }
 
-    sliderGenerateItem();
+    generation(MAX_SLIDE);
+
+    // window.backend.load(URL, function (data) {
+    //     sliderData = data; // Тест без var
+    //     generation(MAX_SLIDE);
+    // });
+
 })();

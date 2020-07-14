@@ -42,6 +42,20 @@
         url("../fonts/open-sans/open-sans-latin_cyrillic-700.ttf");
 }
 
+@font-face {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/open-sans/open-sans-latin_cyrillic-700.eot");
+    src: local("Open Sans Italic"),
+        local("OpenSans-Italic"),
+        url("../fonts/open-sans/open-sans-latin_cyrillic-700.eot?iefix") format("embedded-opentype"),
+        url("../fonts/open-sans/open-sans-latin_cyrillic-700.woff2"),
+        url("../fonts/open-sans/open-sans-latin_cyrillic-700.woff"),
+        url("../fonts/open-sans/open-sans-latin_cyrillic-700.ttf");
+}
+
 /* Lemon Tuesday */
 
 @font-face {

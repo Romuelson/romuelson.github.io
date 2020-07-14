@@ -1,9 +1,10 @@
 .slider {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     min-height: 288px;
     overflow: hidden;
-    background-color: rgba(58, 43, 59, 0.3);
+    // background-color: rgba(58, 43, 59, 0.3);
 
     // &__template {
     //     width: 767px;
@@ -14,22 +15,65 @@
     //     background-size: 767px 240px;
     // }
 
-    // &__title {
-    //     position: absolute;
-    //     top: 30px;
-    //     left: 15px;
-    //     font-family: "Lemon Tuesday", fantasy;
-    //     font-size: 49px;
-    //     line-height: 60px;
-    //     color: $main-color;
-    //     letter-spacing: -0.8px;
-    // }
+    &__products {
+        // align-items: center;
+        // position: relative;
+    }
+
+    &__item {
+        // position: absolute;
+        // mergin: 0
+        // width: 767px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+    }
+
+    &__item:nth-child(2n) {
+        display: none;
+    }
+
+    &__content {
+        position: absolute;
+        // width: 100%;
+        // height: 100%;
+        // width: 320px;
+        // background-color: tomato;
+    }
+
+    &__title {
+        left: 15px;
+        font-family: "Lemon Tuesday", fantasy;
+        font-size: 49px;
+        line-height: 60px;
+        color: $main-color;
+        letter-spacing: -0.8px;
+    }
+
+    &__subtitle {
+        font-style: italic;
+        color: #fff;
+    }
+
+    &__images {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        // margin: 0 auto;
+        // position: relative;
+        // align-self: center;
+        // align-content: center;
+        // display: none;
+    }
 
     /* slider controls */
 
     &__controls {
         margin: 0 auto;
         font-size: 0;
+        // background-color: blue;
     }
 
     &__toggle {
@@ -47,15 +91,46 @@
 //         }
 //     }
 // }
+
 @media (min-width: $desktop-width) {
     .slider {
         grid-column: 1 / 4;
+
+        &__products {
+            position: relative;
+            
+            // width: 100%;
+            // min-height: 500px;
+        }
+
+        &__item {
+            // position: absolute;
+            // width: 100%;
+            // outline: 2px dashed lightblue;
+        }
+
+        &__content {
+            // position: absolute;
+            // left: 50%;
+            // width: $desktop-width;
+            // height: 100%;
+            // margin-left: -600px;
+            // background-color: red;
+        }
+
+        &__title {
+        }
+
+        &__subtitle {
+            // display: none;
+        }
+
+        &__discount {
+            display: none;
+        }
+
+        &__link {
+            display: none;
+        }
     }
-    //     &__template {
-    //         width: 1920px;
-    //         height: 675px;
-    //         background-image: url("/images/slider-image-sushi-desktop.png");
-    //         background-size: 1920px 675px;
-    //     }
-    // }
 }

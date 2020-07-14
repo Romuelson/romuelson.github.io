@@ -51,21 +51,22 @@ header.header.container
         div.slider__products
             template(id="slider__template" style="display: none")
                 div.slider__item
-                    h1.slider__title
-                    p.slider__subtitle
-                    span.slider__discount
-                    picture
+                    div.slider__content
+                        h1.slider__title
+                        p.slider__subtitle
+                        span.slider__discount
+                        a(class="slider__link" href="#!") Подробнее
+                    picture.slider__images
                         source(class="slider__image--desktop" media="(min-width:1200px)" srcset="")
                         source(class="slider__image--tablet" media="(min-width:768px)" srcset="")
                         img(class="slider__image" src="")
-                    a(class="slider__link" href="#!") Подробнее
         div.slider__controls
             label
-                input(class="slider__toggle" type="radio" name="toggle" checked)
+                input(class="slider__toggle" id="btn-1" type="radio" name="toggle" checked)
             label
-                input(class="slider__toggle" type="radio" name="toggle")
+                input(class="slider__toggle" id="btn-2" type="radio" name="toggle")
             label
-                input(class="slider__toggle" type="radio" name="toggle")
+                input(class="slider__toggle" id="btn-3" type="radio" name="toggle")
         //- div.slider__button
         //-     button(class="button__toggle" type="button")
         //-     span Назад
